@@ -344,8 +344,7 @@ class CommentsController < ApplicationController
       @votes = Vote.comment_votes_by_user_for_story_hash(@user.id, comments.map(&:story_id).uniq)
 
       comments.each do |c|
-        if @votes[c.id]
-          c.current_vote = @votes[c.id]
+         c.current_vote ||= @votes[c.id]
         end
       end
     end
