@@ -125,5 +125,3 @@ Administrators can create and edit tags at `/tags`.
 
 Teste
 Teste
-Teste
-Teste
